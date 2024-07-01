@@ -249,7 +249,7 @@ pagination:
   sort_reverse: true
   category: 'posts'
   tag: ''
-  locale: ''
+  locale: 'zh-CN'
   trail:
     before: 2
     after: 2
