@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "zh-CN"
-title                    : "Jeff Fang's Blog"
+title                    : "Jeff Fang的博客 / Jeff Fang's Blog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Jeff Fang"
-description              : "A student from The Chinese University of Hong Kong, Shenzhen."
+description              : "香港中文大学（深圳）的一名学生 / A student from The Chinese University of Hong Kong, Shenzhen."
 url                      : "https://fzhwenzhou.github.io"
 baseurl                  : "/"
 repository               : "fzhwenzhou/fzhwenzhou.github.io"
@@ -114,8 +114,8 @@ analytics:
 author:
   name             : "Jeff Fang"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "A student from The Chinese University of Hong Kong, Shenzhen."
-  location         : "China"
+  bio              : "香港中文大学（深圳）的一名学生 / A student from The Chinese University of Hong Kong, Shenzhen."
+  location         : "中国 / China"
   email            :
   links:
     - label: "Email"
@@ -123,7 +123,7 @@ author:
       url: "mailto:122090106@link.cuhk.edu.cn"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
+      url: "https://fzhwenzhou.github.io/"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
