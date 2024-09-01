@@ -16,16 +16,16 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "zh-CN"
-title                    : "Jeff Fang的博客 / Jeff Fang's Blog"
+title                    : "Jeff (Zihao) Fang的博客 / Jeff (Zihao) Fang's Blog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Jeff Fang"
+name                     : "Jeff (Zihao) Fang"
 description              : "香港中文大学（深圳）的一名学生 / A student from The Chinese University of Hong Kong, Shenzhen."
 url                      : "https://fzhwenzhou.github.io"
 baseurl                  : "/"
 repository               : "fzhwenzhou/fzhwenzhou.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     :  "/assets/images/Cat_Toadette.webp"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -115,7 +115,7 @@ author:
   name             : "Jeff Fang"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "香港中文大学（深圳）的一名学生 / A student from The Chinese University of Hong Kong, Shenzhen."
-  location         : "中国 / China"
+  location         : "深圳 / Shenzhen, China"
   email            :
   links:
     - label: "Email"
