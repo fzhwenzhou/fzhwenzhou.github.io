@@ -1,16 +1,12 @@
 ---
 title: "自我介绍 / Self Introduction"
-header:
-    teaser: "/assets/images/SMB_NES_World_1-1_Screenshot.webp"
 categories:
     - Introduction
 tags:
     - Introduction
 ---
 
-本文中英文版本都有不同的彩蛋，因此如果中英文都懂的话，那你可以获得双倍的快乐 ~~（当然懂意大利语那更好了）~~ 。
-
-Both Chinese and English version have their own easter eggs, so if you can understand both languages, you can get double happiness ~~(Of course, it would be better if you understand Italian)~~ .
+本文中英文版本都有不同的彩蛋，因此如果中英文都懂的话，那你可以获得双倍的快乐 ~~（当然懂意大利语那更好了）~~ 。Both Chinese and English version have their own easter eggs, so if you can understand both languages, you can get double happiness ~~(Of course, it would be better if you understand Italian)~~ .
 
 ## 中文版本
 翘！我叫方梓豪，经常被叫做“方哥”或“豪哥”（但你叫我啥我都不介意的，包括闹闹、玛力露丽和奇诺比珂），是~~龙岗英文大学~~香港中文大学（深圳）的一名学生。在写这篇文章的时候，我是一名大三的学生。目前，我正就读于计算机科学与技术专业。我曾经考虑过走算法竞赛这条路，因此苦学算法和数据结构，为此还在学校的程序设计竞赛中拿过特等奖。不过我现在对这方面是提不起兴趣了，虽然学校的程序设计竞赛肯定还是会去参加的，骗骗奖金（不是）。我现在走的是系统底层、并行计算的道路。目前，我正在钟叶青教授的指导下进行嵌入式系统和软硬件协同设计方面的研究。我目前是香港中文大学（深圳）高性能计算（HPC）队队长，数据科学学院学生联会会长，以及计算机学会学术部管理层成员。
