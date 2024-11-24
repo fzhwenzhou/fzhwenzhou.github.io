@@ -18,7 +18,7 @@ tags:
 - 网络适配器：4 * 英特尔 以太网控制器 I350
 
 软件配置：
-- 操作系统：Ubuntu Server 24.04.01 LTS
+- 操作系统：Ubuntu Server 24.04.1 LTS
 - C/C++编译器：GCC 13.2.0
 - 构建系统：GNU Make 4.3 + CMake 3.28.3
 - MPI：OpenMPI 4.1.6
@@ -107,7 +107,7 @@ sudo apt install -y slurmctld
 将控制节点（hpc01）的`/etc/munge/munge.key`拷贝到其他的所有节点的相同位置。然后用`chmod`命令将权限设置为600，并使用`chown`命令将所有权转移给munge用户。
 使用[Slurm Version 24.05 Configuration Tool](https://slurm.schedmd.com/configurator.html)生成slurm.conf文件。虽然网站上指明本工具只适用于Slurm 24.05，但是经过测试，23.11.4也是可以用的。必要的修改有：
 - 将SlurmctldHost改成hpc01
-- 将NodeName改成hpc0[1-\8]
+- 将NodeName改成hpc0[1-8\]
 - 将CPUs改成40
 - 将Sockets改成2
 - 将CoresPerSocket改成10
@@ -213,6 +213,9 @@ echo -1 > /proc/sys/kernel/perf_event_paranoid
 
 ### 总结
 以上就是配置超算集群的基础教程。完成以上工作后，集群仅限于达到了“可用”的状态，仍然需要更多的配置来完善。本文作者才疏学浅，文章可能存在错漏，恳请各位读者赐教。
+
+### 特别鸣谢
+感谢郑晗骏和李默涵同学在配置过程中的特殊贡献！
 
 
 ## English Version
