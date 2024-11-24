@@ -1,5 +1,5 @@
 ---
-title: "高性能计算环境配置 / Self Introduction"
+title: "高性能计算环境配置 / HPC Environment Configuration"
 categories:
     - HPC
 tags:
