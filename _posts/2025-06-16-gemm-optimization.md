@@ -43,6 +43,17 @@ void GEMM(double *A, double *B, double *Out, int M, int K, int N) {
 
 Next, I will propose some "magics" to optimize it without changing the algorithm.
 
+### Prerequisites
+I assume that you have adequate knowledge in:
+- C language
+- Computer Architecture
+- Compiler
+- Shared Memory Systems
+- Network
+- Principle of GPUs
+
+If you did not fulfill the prerequisites, it might be difficult for you to understand some concepts. Have fun!
+
 ### Memory Locality
 Some may thought that this part is not related to parallel computing. They are actually wrong. Improving the memory locality not only better utilizes caches, but also allows the compiler to auto-vectorize code better to achieve data parallelism. Therefore, improving the memory locality might be the easier way to improve the performance. 
 
@@ -118,8 +129,33 @@ void dgemm(double *A, double *B, double *Out, size_t M, size_t K, size_t N) {
 Since ARM NEON only has 128-bit vectors, it can only process two elements once and its performance could be significantly lower than AVX512. On Apple Silicon Mac with Apple Clang, the performance could even be lower than the naïve version with "-O3" optimization. Therefore, this solution only provides a proof-of-concept of this, but no practical use. Maybe it would be better for SVE and SVE2 on ARMv9, but before I got a device with them, I will keep it anyway.
 
 ### Multithreading -- OpenMP
+Despite the compiler may exploit data level parallelism (DLP) and possibly instruction level parallelism (ILP, on VLIW architectures), it cannot handle thread level parallelism (TLP) in the context of C language. Therefore, we have to implement it by hand.
 
+In C language, there are two common ways to create multithreading programs: pthread and OpenMP. While OpenMP has a simpler grammar and provides a better solution to cross-platform programming, pthread has more freedom in customization but is only for POSIX platforms. For simplicity I will mainly introduce OpenMP in this section.
+
+OpenMP is a directive-based multithreading framework. That is, it can parallelize procedures and loops based on pragmas. By simply adding `#pragma omp parallel for` to the for loop that needs to be parallelized, it can easily parallelize loops without special techniques. However, you have to ensure that there is no data dependency between loops. Therefore, we can safely parallelize the outer two loops.
+
+Here is the parallelized code sample. `collapse` is used for collapsing specific numbers of nested loops. Therefore, you don't need to manually collapse the loops and calculate the indices with modular arithmetics. 
+```c
+void dgemm(double *A, double *B, double *Out, int M, int K, int N) {
+    #pragma omp parallel for collapse(2)
+    for (int i = 0; i < M; ++i) {
+        for (int k = 0; k < K; ++k) {
+            for (int j = 0; j < N; ++j) {
+                Out[i * N + j] += A[i * K + k] * B[k * N + j];
+            }
+        }
+    }
+}
+```
+If using i-j-k instead of i-k-j, you can further parallelize the inner loop by conducting the reduce operation. However, it will lower the memory locality and the performance gained by the reduce operation could not compensate the lost. Therefore, there is no need to change the loop order.
+
+Here are some other ways to create multithreaded programs in case you are interesed:
+- C11 `threads.h`: A cross-platform standard of threading in C language, providing a unified library for both POSIX and Win32 systems. However, it is so simple that it cannot cover the functions of threads in either system.
+- C++11 `thread`: A cross-platform standard of threading in C++ language with the same purpose as C11's `threads.h`. However, it utilizes some unique features of C++ like RAII and template functions. Therefore, it is much more useful than the C version.
+- C++17 `execution`: A library that identifies the execution policy of parallel algorithms, i.e., the kind of parallelism allowed. It can be used in some functions in the `algorithm` library like `sort` or `find`. This might be the easier way to parallelize existing functions in the `algorithm` library. Moreover, the implementation can define more policies like `std::execution::cuda` or `std::execution::opencl`, therefore achieving heterogeneous computing without any difficulties.
 
 ### Distributed Computing -- MPI
+
 
 ### Heterogeneous Computing -- OpenACC
