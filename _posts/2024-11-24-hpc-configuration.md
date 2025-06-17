@@ -4,6 +4,7 @@ categories:
     - HPC
 tags:
     - HPC
+toc: true
 ---
 
 ## 中文版本

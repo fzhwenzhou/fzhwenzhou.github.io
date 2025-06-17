@@ -4,6 +4,7 @@ categories:
     - Introduction
 tags:
     - Introduction
+toc: true
 ---
 
 本文中英文版本都有不同的彩蛋，因此如果中英文都懂的话，那你可以获得双倍的快乐 ~~（当然懂意大利语那更好了）~~ 。Both Chinese and English version have their own easter eggs, so if you can understand both languages, you can get double happiness ~~(Of course, it would be better if you understand Italian)~~ .
