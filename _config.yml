@@ -15,18 +15,18 @@
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "zh-CN"
-title                    : "Jeff (Zihao) Fang的博客 / Jeff (Zihao) Fang's Blog"
+locale                   : "en-US"
+title                    : "Zihao Fang"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Jeff (Zihao) Fang"
-description              : "香港中文大学（深圳）的一名学生 / A student from The Chinese University of Hong Kong, Shenzhen."
+name                     : "Zihao Fang"
+description              : "Zihao Fang is a master’s student in Computer Science at Columbia University, researching computer systems, compilers, and AI agents for computer architecture and operating systems."
 url                      : "https://fzhwenzhou.github.io"
-baseurl                  : "/"
+baseurl                  : ""
 repository               : "fzhwenzhou/fzhwenzhou.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     :  "/assets/images/Cat_Toadette.webp"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+logo                     : ""
+masthead_title           : "Research & Academic Profile"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 enable_copy_code_button  : # true, false (default)
@@ -112,30 +112,14 @@ analytics:
 
 # Site Author
 author:
-  name             : "Jeff Fang"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "香港中文大学（深圳）的一名学生 / A student from The Chinese University of Hong Kong, Shenzhen."
-  location         : "深圳 / Shenzhen, China"
-  email            :
-  links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:122090106@link.cuhk.edu.cn"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://fzhwenzhou.github.io/"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/fzhwenzhou"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+  name             : "Zihao Fang"
+  avatar           : "/assets/images/zihao_fang.png"
+  bio              : "Master’s student in Computer Science at Columbia University."
+  location         : "New York, NY"
+  email            : "zf2408@columbia.edu"
+  alternate_email  : "fzhwenzhou@gmail.com"
+  github           : "fzhwenzhou"
+  linkedin         : "zihao-fang-755886436"
 
 # Site Footer
 footer:
@@ -165,6 +149,8 @@ include:
   - .htaccess
   - _pages
 exclude:
+  - _site
+  - minimal-mistakes-jekyll.gemspec
   - "*.sublime-project"
   - "*.sublime-workspace"
   - vendor
@@ -188,6 +174,11 @@ exclude:
   - package-lock.json
   - Rakefile
   - README
+  - README.md
+  - Resume.pdf
+  - resume.pdf
+  - CV_English.pdf
+  - CHANGELOG.md
   - tmp
   - /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
@@ -230,8 +221,7 @@ timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Pagination with jekyll-paginate
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
+# The blog archive lists all posts by year; pagination is not needed.
 
 # Pagination with jekyll-paginate-v2
 # See https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md#site-configuration
@@ -257,7 +247,6 @@ pagination:
 
 # Plugins (previously gems:)
 plugins:
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
@@ -266,7 +255,6 @@ plugins:
 
 # mimic GitHub Pages with --safe
 whitelist:
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
